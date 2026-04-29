@@ -1,2 +1,2 @@
 # html
-AI Smart Work Portfollio
+AI Smart Work Portfolio
