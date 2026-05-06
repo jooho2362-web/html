@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/history.css">
     <link rel="stylesheet" href="css/equipment.css">
     <link rel="stylesheet" href="css/facilities.css">
+    <link rel="stylesheet" href="css/data.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
@@ -31,7 +32,7 @@
                     <li><a href="#history" class="nav-link">업력</a></li>
                     <li><a href="#equipment" class="nav-link">장비소개</a></li>
                     <li><a href="#facilities" class="nav-link">시설소개</a></li>
-                    <li><a href="#documents" class="nav-link">문서자료</a></li>
+                    <li><a href="#data" class="nav-link">기업 자료실</a></li>
                     <li><a href="#contact" class="nav-link">문의하기</a></li>
                     <li><a href="#location" class="nav-link">오시는 길</a></li>
                 </ul>
@@ -47,9 +48,9 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="hero-bg"></div>
-            <div class="hero-overlay"></div>
+        <section id="hero" class="hero" style="background-image: url('images/hero-bg.png'); background-size: cover; background-position: center;">
+            <div class="hero-bg" style="background: none;"></div>
+            <div class="hero-overlay" style="background: rgba(0, 0, 0, 0.5);"></div>
             <div class="container hero-content">
                 <h1 class="fade-up">깨끗한 물의 흐름을<br>책임지는 기술</h1>
                 <p class="fade-up" style="transition-delay: 0.2s;">워터 펌프 제작 · 설치 · 유지보수 전문 기업, (주)비에이텍</p>
@@ -139,7 +140,7 @@
                 
                 <div class="equipment-grid">
                     <div class="card fade-up">
-                        <div class="card-img placeholder-img">산업용 펌프 이미지</div>
+                        <img src="images/industrial-pump.png" alt="산업용 펌프" style="width: 100%; height: 200px; object-fit: cover;">
                         <div class="card-content">
                             <h3>산업용 펌프 (BA-IND Series)</h3>
                             <p>대규모 산업 단지 및 플랜트 시설에 적합한 고출력, 고내구성 펌프입니다.</p>
@@ -150,7 +151,7 @@
                         </div>
                     </div>
                     <div class="card fade-up" style="transition-delay: 0.1s;">
-                        <div class="card-img placeholder-img">농업용 펌프 이미지</div>
+                        <img src="images/industrial-pump.png" alt="농업용 펌프" style="width: 100%; height: 200px; object-fit: cover; filter: hue-rotate(90deg);">
                         <div class="card-content">
                             <h3>농업용 펌프 (BA-AGR Series)</h3>
                             <p>가뭄 대응 및 원활한 용수 공급을 위한 에너지 효율 특화 펌프입니다.</p>
@@ -161,7 +162,7 @@
                         </div>
                     </div>
                     <div class="card fade-up" style="transition-delay: 0.2s;">
-                        <div class="card-img placeholder-img">특수 펌프 이미지</div>
+                        <img src="images/industrial-pump.png" alt="특수 목적 펌프" style="width: 100%; height: 200px; object-fit: cover; filter: hue-rotate(180deg);">
                         <div class="card-content">
                             <h3>특수 목적 펌프 (BA-SPC Series)</h3>
                             <p>화학 물질, 고점도 액체 이송을 위한 맞춤형 정밀 펌프입니다.</p>
@@ -181,10 +182,8 @@
                 <h2 class="section-title fade-up">Facilities & Process</h2>
                 <p class="section-subtitle fade-up">첨단 설비와 엄격한 품질 관리</p>
                 
-                <div class="gallery-grid fade-up">
-                    <div class="gallery-item placeholder-img">제조 라인 1</div>
-                    <div class="gallery-item placeholder-img">성능 테스트실</div>
-                    <div class="gallery-item placeholder-img">정밀 가공 센터</div>
+                <div class="gallery-grid fade-up" style="grid-template-columns: 1fr;">
+                    <img src="images/factory-facility.png" alt="제조 라인 및 설비" style="width: 100%; height: 400px; object-fit: cover; border-radius: 8px;">
                 </div>
                 
                 <div class="process-diagram fade-up">
@@ -207,6 +206,64 @@
                         <div class="step-num">04</div>
                         <p>납품 & 사후관리</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Section -->
+        <section id="data" class="section data bg-light">
+            <div class="container">
+                <h2 class="section-title fade-up">Corporate Data</h2>
+                <p class="section-subtitle fade-up">비에이텍의 인증 현황 및 기업 자료를 확인하실 수 있습니다.</p>
+                
+                <div class="data-grid">
+                    <a href="기업데이터/홈페이지자료/ISO9001인증서.pdf" target="_blank" class="data-card fade-up">
+                        <div class="data-icon">📄</div>
+                        <div class="data-info">
+                            <h4>ISO 9001 인증서</h4>
+                            <p>품질경영시스템 인증</p>
+                        </div>
+                    </a>
+                    <a href="기업데이터/홈페이지자료/KC인증서.pdf" target="_blank" class="data-card fade-up" style="transition-delay: 0.1s;">
+                        <div class="data-icon">📄</div>
+                        <div class="data-info">
+                            <h4>KC 인증서</h4>
+                            <p>국가통합인증마크</p>
+                        </div>
+                    </a>
+                    <a href="기업데이터/홈페이지자료/메인비즈 확인서(기한27.09.13.).pdf" target="_blank" class="data-card fade-up" style="transition-delay: 0.2s;">
+                        <div class="data-icon">📄</div>
+                        <div class="data-info">
+                            <h4>메인비즈 확인서</h4>
+                            <p>경영혁신형 중소기업</p>
+                        </div>
+                    </a>
+                    <a href="기업데이터/홈페이지자료/사진대장 - 비에이텍(주) 공장.hwp" class="data-card fade-up" style="transition-delay: 0.3s;">
+                        <div class="data-icon">📁</div>
+                        <div class="data-info">
+                            <h4>공장 사진대장</h4>
+                            <p>시설 현황 및 현장 사진 (HWP)</p>
+                        </div>
+                    </a>
+                    <a href="기업데이터/홈페이지자료/조직도 및 업무분장.xlsx" class="data-card fade-up" style="transition-delay: 0.4s;">
+                        <div class="data-icon">📊</div>
+                        <div class="data-info">
+                            <h4>조직도 및 업무분장</h4>
+                            <p>회사 조직 구성도 (Excel)</p>
+                        </div>
+                    </a>
+                    <a href="기업데이터/지명원 (1).pdf" target="_blank" class="data-card fade-up" style="transition-delay: 0.5s;">
+                        <div class="data-icon">📘</div>
+                        <div class="data-info">
+                            <h4>회사 지명원</h4>
+                            <p>기업 소개 통합 문서</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="data-preview fade-up" style="margin-top: 3rem; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-md);">
+                    <h3 style="padding: 1rem 1.5rem; background: var(--bg-main); color: var(--primary-color); margin: 0; font-size: 1.2rem; border-bottom: 1px solid var(--border-color);">회사 지명원 미리보기</h3>
+                    <iframe src="기업데이터/지명원 (1).pdf#view=FitH" width="100%" height="600px" style="border: none; display: block;"></iframe>
                 </div>
             </div>
         </section>
@@ -267,12 +324,8 @@
                 <h2 class="section-title fade-up">Location</h2>
                 <p class="section-subtitle fade-up">찾아오시는 길</p>
                 
-                <div class="map-container fade-up" id="map">
-                    <!-- Naver Map API 렌더링 영역 (임시 Placeholder) -->
-                    <div class="map-placeholder">
-                        <p>네이버 지도 API 연동 영역</p>
-                        <p class="small">※ 실제 적용 시 Naver Cloud Client ID 필요</p>
-                    </div>
+                <div class="map-container fade-up" id="map" style="height: 400px; border-radius: 8px; overflow: hidden; margin-bottom: 2rem; box-shadow: var(--shadow-sm);">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.730303862211!2d127.03712531558913!3d37.51433603223028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3e7b23c21a5%3A0xc312eb7e4d58ba25!2z7ISc7Jq47Yq567OE7IucIOqwnOuCqOq1rCDthYztl6TrnoDro5wgMTIz!5e0!3m2!1sko!2skr!4v1655106196525!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 
                 <div class="location-info fade-up">
@@ -287,59 +340,6 @@
                     <div class="info-block">
                         <h4>🚗 자가용</h4>
                         <p>건물 지하 1층~3층 방문자 전용 주차장 이용 가능</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Documents Section -->
-        <section id="documents" class="section documents bg-light">
-            <div class="container">
-                <h2 class="section-title fade-up">Documents & Resources</h2>
-                <p class="section-subtitle fade-up">펌프 유지관리 지침서 및 회사 인증서 등 자료를 확인하실 수 있습니다.</p>
-                
-                <div class="documents-grid">
-                    <div class="document-category fade-up">
-                        <h3>펌프 유지관리 지침서</h3>
-                        <ul class="document-list">
-                            <li><a href="기업데이터/펌프유지관리지침서/부스터펌프 유지관리지침서.hwp" download>부스터펌프 유지관리지침서.hwp</a></li>
-                            <li><a href="기업데이터/펌프유지관리지침서/수중펌프 유지관리지침서.hwp" download>수중펌프 유지관리지침서.hwp</a></li>
-                            <li><a href="기업데이터/펌프유지관리지침서/슬러지펌프 유지관리지침서.hwp" download>슬러지펌프 유지관리지침서.hwp</a></li>
-                            <li><a href="기업데이터/펌프유지관리지침서/일축나사식 모노펌프 유지관리지침서.hwp" download>일축나사식 모노펌프 유지관리지침서.hwp</a></li>
-                            <li><a href="기업데이터/펌프유지관리지침서/편흡입볼류트펌프 유지관리지침서.hwp" download>편흡입볼류트펌프 유지관리지침서.hwp</a></li>
-                            <li class="document-preview">
-                                <img src="images/pump_maintenance_preview.png" alt="정량펌프 미리보기" class="preview-img">
-                                <a href="기업데이터/펌프유지관리지침서/정량펌프 유지관리지침서.pdf" target="_blank">정량펌프 유지관리지침서.pdf</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="document-category fade-up" style="transition-delay: 0.1s;">
-                        <h3>홈페이지 자료</h3>
-                        <ul class="document-list">
-                            <li class="document-preview">
-                                <img src="images/iso9001_preview.png" alt="ISO9001 미리보기" class="preview-img">
-                                <a href="기업데이터/홈페이지자료/ISO9001인증서.pdf" target="_blank">ISO9001인증서.pdf</a>
-                            </li>
-                            <li class="document-preview">
-                                <img src="images/kc_preview.png" alt="KC 인증서 미리보기" class="preview-img">
-                                <a href="기업데이터/홈페이지자료/KC인증서.pdf" target="_blank">KC인증서.pdf</a>
-                            </li>
-                            <li class="document-preview">
-                                <img src="images/mainbiz_preview.png" alt="메인비즈 미리보기" class="preview-img">
-                                <a href="기업데이터/홈페이지자료/메인비즈 확인서(기한27.09.13.).pdf" target="_blank">메인비즈 확인서(기한27.09.13.).pdf</a>
-                            </li>
-                            <li><a href="기업데이터/홈페이지자료/사진대장 - 비에이텍(주) 공장.hwp" download>사진대장 - 비에이텍(주) 공장.hwp</a></li>
-                            <li><a href="기업데이터/홈페이지자료/조직도 및 업무분장.xlsx" download>조직도 및 업무분장.xlsx</a></li>
-                        </ul>
-                    </div>
-                    <div class="document-category fade-up" style="transition-delay: 0.2s;">
-                        <h3>기타 자료</h3>
-                        <ul class="document-list">
-                            <li class="document-preview">
-                                <img src="images/jimingwon_preview.png" alt="지명원 미리보기" class="preview-img">
-                                <a href="기업데이터/지명원 (1).pdf" target="_blank">지명원 (1).pdf</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
