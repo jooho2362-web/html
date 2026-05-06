@@ -150,3 +150,67 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Documents Section */
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.document-category {
+  background: var(--bg-main);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-normal);
+}
+
+.document-category:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.document-category h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.document-list {
+  list-style: none;
+  padding: 0;
+}
+
+.document-list li {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.document-list li:last-child {
+  border-bottom: none;
+}
+
+.document-list a {
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.document-list a:hover {
+  color: var(--secondary-color);
+}
+
+.document-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.preview-img {
+  width: 80px;
+  height: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
