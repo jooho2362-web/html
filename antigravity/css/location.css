@@ -7,6 +7,7 @@
   margin-bottom: 3rem;
   overflow: hidden;
   position: relative;
+  box-shadow: var(--shadow-sm);
 }
 
 .map-placeholder {
@@ -37,6 +38,12 @@
   padding: 2rem;
   border-radius: 8px;
   text-align: center;
+  transition: box-shadow var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.info-block:hover {
+  box-shadow: var(--shadow-md);
 }
 
 .info-block h4 {
@@ -47,11 +54,75 @@
 
 .info-block p {
   color: var(--text-main);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .map-container {
+    height: 350px;
+  }
+
+  .location-info {
+    gap: 1.5rem;
+  }
+
+  .info-block {
+    padding: 1.5rem;
+  }
+
+  .info-block h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .info-block p {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .map-container {
+    height: 300px;
+    margin-bottom: 2rem;
+  }
+
   .location-info {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .info-block {
+    padding: 1.2rem;
+  }
+
+  .info-block h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .info-block p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container {
+    height: 250px;
+  }
+
+  .location-info {
+    gap: 0.8rem;
+  }
+
+  .info-block {
+    padding: 1rem;
+  }
+
+  .info-block h4 {
+    font-size: 0.95rem;
+  }
+
+  .info-block p {
+    font-size: 0.85rem;
   }
 }

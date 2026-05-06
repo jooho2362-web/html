@@ -3,6 +3,7 @@
   background-color: #1a1a1a;
   color: #f1f1f1;
   padding: 4rem 0 2rem;
+  margin-top: 5rem;
 }
 
 .footer-top {
@@ -11,12 +12,14 @@
   border-bottom: 1px solid #333;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
+  gap: 3rem;
 }
 
 .footer-brand h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--text-light);
   margin-bottom: 0.5rem;
+  font-weight: 800;
 }
 
 .footer-brand span {
@@ -25,20 +28,25 @@
 
 .footer-brand p {
   color: #aaa;
+  font-size: 0.95rem;
 }
 
 .footer-contact h4 {
   margin-bottom: 1rem;
   color: #fff;
+  font-size: 1.1rem;
 }
 
 .footer-contact p {
   margin-bottom: 0.5rem;
   color: #ccc;
+  font-size: 0.95rem;
 }
 
 .footer-contact a {
   color: #fff;
+  text-decoration: none;
+  transition: color var(--transition-fast);
 }
 
 .footer-contact a:hover {
@@ -55,9 +63,88 @@
   margin-bottom: 0.5rem;
 }
 
+@media (max-width: 1024px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .footer-top {
+    gap: 2rem;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .footer {
+    padding: 2.5rem 0 1.5rem;
+  }
+
   .footer-top {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.4rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.9rem;
+  }
+
+  .footer-contact h4 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-contact p {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+
+  .footer-top {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.85rem;
+  }
+
+  .footer-contact h4 {
+    font-size: 0.95rem;
+  }
+
+  .footer-contact p {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom p {
+    margin-bottom: 0.3rem;
   }
 }

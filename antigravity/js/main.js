@@ -39,8 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Optional: Stop observing once visible if you want the animation to happen only once
-                // observer.unobserve(entry.target); 
             }
         });
     }, observerOptions);
@@ -48,6 +46,95 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeUpElements.forEach(el => {
         observer.observe(el);
     });
+
+    // 4. Contact Form Handler
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                type: document.getElementById('type').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toISOString()
+            };
+            
+            // Log form data (in real application, send to server)
+            console.log('문의하기 접수:', formData);
+            
+            // Store in localStorage as backup
+            try {
+                const existingQueries = JSON.parse(localStorage.getItem('contactQueries') || '[]');
+                existingQueries.push(formData);
+                localStorage.setItem('contactQueries', JSON.stringify(existingQueries));
+            } catch (error) {
+                console.error('LocalStorage 저장 오류:', error);
+            }
+            
+            // Show success message
+            contactForm.style.display = 'none';
+            formSuccess.style.display = 'block';
+            
+            // Reset form and message after 3 seconds
+            setTimeout(() => {
+                contactForm.reset();
+                contactForm.style.display = 'block';
+                formSuccess.style.display = 'none';
+                
+                // Scroll to form
+                contactForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 3000);
+        });
+    }
+
+    // 5. Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && document.querySelector(href)) {
+                e.preventDefault();
+                const element = document.querySelector(href);
+                const headerHeight = header.offsetHeight;
+                const elementPosition = element.offsetTop - headerHeight;
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // 6. Add padding to body for fixed header
+    const mainElement = document.querySelector('main');
+    if (mainElement) {
+        mainElement.style.paddingTop = header.offsetHeight + 'px';
+    }
+
+    // 7. Handle window resize for responsive adjustments
+    window.addEventListener('resize', () => {
+        if (mainElement) {
+            mainElement.style.paddingTop = header.offsetHeight + 'px';
+        }
+    });
+
+    // 8. Logo click to scroll to top
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
 
     // 4. Contact Form Submission (Simulation)
     const contactForm = document.getElementById('contactForm');

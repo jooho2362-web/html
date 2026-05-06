@@ -35,12 +35,14 @@
 .card-content h3 {
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 .card-content p {
   color: var(--text-muted);
   margin-bottom: 1rem;
   font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .spec-list {
@@ -62,4 +64,41 @@
   left: 0;
   color: var(--secondary-color);
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .equipment-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-img {
+    height: 180px;
+  }
+
+  .card-content {
+    padding: 1.2rem;
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-content {
+    padding: 1rem;
+  }
+
+  .card-img {
+    height: 150px;
+  }
+
+  .spec-list li {
+    font-size: 0.85rem;
+  }
 }
